@@ -1,0 +1,258 @@
+[
+  {
+    "id": 1,
+    "case_id": "CASE-2026-101",
+    "image_path": "data/eval_photos/eval_pothole_01.jpg",
+    "expected_category": "pothole",
+    "description": "Large pothole on Poplar Avenue near Overton Park",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 2,
+    "case_id": "CASE-2026-102",
+    "image_path": "data/eval_photos/eval_pothole_02.jpg",
+    "expected_category": "pothole",
+    "description": "Cracked road surface on Union Avenue in Midtown",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 3,
+    "case_id": "CASE-2026-103",
+    "image_path": "data/eval_photos/eval_pothole_03.jpg",
+    "expected_category": "pothole",
+    "description": "Deep road depression on Summer Avenue near White Station",
+    "neighborhood": "East Memphis"
+  },
+  {
+    "id": 4,
+    "case_id": "CASE-2026-104",
+    "image_path": "data/eval_photos/eval_pothole_04.jpg",
+    "expected_category": "pothole",
+    "description": "Pothole at intersection of Getwell and Park Avenue",
+    "neighborhood": "Berclair"
+  },
+  {
+    "id": 5,
+    "case_id": "CASE-2026-105",
+    "image_path": "data/eval_photos/eval_pothole_05.jpg",
+    "expected_category": "pothole",
+    "description": "Road surface damage on Elvis Presley Boulevard near Graceland",
+    "neighborhood": "Whitehaven"
+  },
+  {
+    "id": 6,
+    "case_id": "CASE-2026-106",
+    "image_path": "data/eval_photos/eval_graffiti_01.jpg",
+    "expected_category": "graffiti",
+    "description": "Spray paint tags on retaining wall along Danny Thomas Boulevard",
+    "neighborhood": "Downtown"
+  },
+  {
+    "id": 7,
+    "case_id": "CASE-2026-107",
+    "image_path": "data/eval_photos/eval_graffiti_02.jpg",
+    "expected_category": "graffiti",
+    "description": "Graffiti on abandoned building facade on South Main Street",
+    "neighborhood": "South Main"
+  },
+  {
+    "id": 8,
+    "case_id": "CASE-2026-108",
+    "image_path": "data/eval_photos/eval_graffiti_03.jpg",
+    "expected_category": "graffiti",
+    "description": "Vandalism on underpass wall at Sam Cooper Boulevard",
+    "neighborhood": "East Memphis"
+  },
+  {
+    "id": 9,
+    "case_id": "CASE-2026-109",
+    "image_path": "data/eval_photos/eval_graffiti_04.jpg",
+    "expected_category": "graffiti",
+    "description": "Paint tags on utility box near Cooper-Young intersection",
+    "neighborhood": "Cooper-Young"
+  },
+  {
+    "id": 10,
+    "case_id": "CASE-2026-110",
+    "image_path": "data/eval_photos/eval_graffiti_05.jpg",
+    "expected_category": "graffiti",
+    "description": "Spray paint on fence along North Parkway near Vollintine",
+    "neighborhood": "Vollintine-Evergreen"
+  },
+  {
+    "id": 11,
+    "case_id": "CASE-2026-111",
+    "image_path": "data/eval_photos/eval_streetlight_01.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Tilted street light pole on Lamar Avenue near Airways",
+    "neighborhood": "Orange Mound"
+  },
+  {
+    "id": 12,
+    "case_id": "CASE-2026-112",
+    "image_path": "data/eval_photos/eval_streetlight_02.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Non-functioning street lamp on Third Street downtown",
+    "neighborhood": "Downtown"
+  },
+  {
+    "id": 13,
+    "case_id": "CASE-2026-113",
+    "image_path": "data/eval_photos/eval_streetlight_03.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Broken light fixture on Germantown Parkway near Cordova",
+    "neighborhood": "Cordova"
+  },
+  {
+    "id": 14,
+    "case_id": "CASE-2026-114",
+    "image_path": "data/eval_photos/eval_streetlight_04.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Flickering street light at Walnut Grove and Perkins intersection",
+    "neighborhood": "East Memphis"
+  },
+  {
+    "id": 15,
+    "case_id": "CASE-2026-115",
+    "image_path": "data/eval_photos/eval_streetlight_05.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Damaged light pole leaning over sidewalk on Highland Avenue",
+    "neighborhood": "University District"
+  },
+  {
+    "id": 16,
+    "case_id": "CASE-2026-116",
+    "image_path": "data/eval_photos/eval_dumping_01.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Mattress and furniture dumped on vacant lot off Chelsea Avenue",
+    "neighborhood": "North Memphis"
+  },
+  {
+    "id": 17,
+    "case_id": "CASE-2026-117",
+    "image_path": "data/eval_photos/eval_dumping_02.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Construction debris piled near drainage ditch on Frayser Boulevard",
+    "neighborhood": "Frayser"
+  },
+  {
+    "id": 18,
+    "case_id": "CASE-2026-118",
+    "image_path": "data/eval_photos/eval_dumping_03.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Household trash bags dumped at dead end on Boxtown Road",
+    "neighborhood": "Westwood"
+  },
+  {
+    "id": 19,
+    "case_id": "CASE-2026-119",
+    "image_path": "data/eval_photos/eval_dumping_04.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Tires and scrap metal left on sidewalk near Raleigh-Millington Road",
+    "neighborhood": "Raleigh"
+  },
+  {
+    "id": 20,
+    "case_id": "CASE-2026-120",
+    "image_path": "data/eval_photos/eval_dumping_05.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Appliances abandoned in parking lot off Winchester Road",
+    "neighborhood": "Hickory Hill"
+  },
+  {
+    "id": 21,
+    "case_id": "CASE-2026-121",
+    "image_path": "data/eval_photos/eval_water_01.jpg",
+    "expected_category": "water_damage",
+    "description": "Water main leak flooding sidewalk on Madison Avenue",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 22,
+    "case_id": "CASE-2026-122",
+    "image_path": "data/eval_photos/eval_water_02.jpg",
+    "expected_category": "water_damage",
+    "description": "Storm drain overflow near Overton Park entrance",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 23,
+    "case_id": "CASE-2026-123",
+    "image_path": "data/eval_photos/eval_water_03.jpg",
+    "expected_category": "water_damage",
+    "description": "Broken fire hydrant spraying water on Bellevue Boulevard",
+    "neighborhood": "Crosstown"
+  },
+  {
+    "id": 24,
+    "case_id": "CASE-2026-124",
+    "image_path": "data/eval_photos/eval_water_04.jpg",
+    "expected_category": "water_damage",
+    "description": "Sewer backup flooding intersection at Third and Beale",
+    "neighborhood": "Downtown"
+  },
+  {
+    "id": 25,
+    "case_id": "CASE-2026-125",
+    "image_path": "data/eval_photos/eval_water_05.jpg",
+    "expected_category": "water_damage",
+    "description": "Standing water from pipe burst on Jackson Avenue near Manassas",
+    "neighborhood": "Klondike"
+  },
+  {
+    "id": 26,
+    "case_id": "CASE-2026-126",
+    "image_path": "data/eval_photos/eval_pothole_06.jpg",
+    "expected_category": "pothole",
+    "description": "Severely cracked road with standing water filling depressions after rain on Vollintine Avenue",
+    "neighborhood": "Vollintine-Evergreen"
+  },
+  {
+    "id": 27,
+    "case_id": "CASE-2026-127",
+    "image_path": "data/eval_photos/eval_graffiti_06.jpg",
+    "expected_category": "graffiti",
+    "description": "Painted-over graffiti with bleed-through and fresh marker tag on retaining wall near Poplar Avenue",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 28,
+    "case_id": "CASE-2026-128",
+    "image_path": "data/eval_photos/eval_dumping_06.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Household items and furniture placed at curb on Prescott Street, possible bulk pickup or dumping",
+    "neighborhood": "Binghampton"
+  },
+  {
+    "id": 29,
+    "case_id": "CASE-2026-129",
+    "image_path": "data/eval_photos/eval_clean_01.jpg",
+    "expected_category": "unknown",
+    "description": "Freshly paved road on Airways Boulevard with no cracks or damage",
+    "neighborhood": "Orange Mound"
+  },
+  {
+    "id": 30,
+    "case_id": "CASE-2026-130",
+    "image_path": "data/eval_photos/eval_clean_02.jpg",
+    "expected_category": "unknown",
+    "description": "Authorized community mural on Broad Avenue, professional public art installation",
+    "neighborhood": "Binghampton"
+  },
+  {
+    "id": 31,
+    "case_id": "CASE-2026-131",
+    "image_path": "data/eval_photos/eval_clean_03.jpg",
+    "expected_category": "unknown",
+    "description": "Working streetlight at dusk on Central Avenue, fully operational",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 32,
+    "case_id": "CASE-2026-132",
+    "image_path": "data/eval_photos/eval_clean_04.jpg",
+    "expected_category": "unknown",
+    "description": "Neatly organized bulk pickup items at curb on Prescott Street, scheduled collection",
+    "neighborhood": "Binghampton"
+  }
+]

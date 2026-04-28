@@ -1,0 +1,7 @@
+{
+  "pothole": ["pothole", "road", "crack", "asphalt", "pavement", "hole", "damage", "surface", "road_damage"],
+  "graffiti": ["graffiti", "spray", "paint", "vandalism", "wall", "mural", "tag", "street_art", "graffiti_art", "spray_paint"],
+  "broken_streetlight": ["streetlight", "street_light", "lamp", "pole", "electrical", "fixture", "bulb", "lamp_post"],
+  "illegal_dumping": ["trash", "dump", "debris", "furniture", "waste", "litter", "junk", "pile", "abandoned_items"],
+  "water_damage": ["water", "flood", "leak", "pipe", "sewer", "hydrant", "puddle", "overflow", "water_main"]
+}

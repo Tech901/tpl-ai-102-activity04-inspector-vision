@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">3-Way Classifier Comparison: Tag Heuristic vs Zero-shot GPT-4o vs Few-shot GPT-4o</title>
+  <desc id="desc2">Three-way comparison of classification approaches for Memphis 311 inspection photos: tag-based heuristic using Azure AI Vision tags, zero-shot GPT-4o multimodal, and few-shot GPT-4o with example images per category. Includes cost-per-correct analysis.</desc>
+
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <linearGradient id="box2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E1E1E"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="amber2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFBF3B"/>
+      <stop offset="100%" stop-color="#E5A832"/>
+    </linearGradient>
+    <linearGradient id="purple2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9B59B6"/>
+      <stop offset="100%" stop-color="#8E44AD"/>
+    </linearGradient>
+    <linearGradient id="blue2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2D5A94"/>
+      <stop offset="100%" stop-color="#234A7A"/>
+    </linearGradient>
+    <linearGradient id="teal2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1ABC9C"/>
+      <stop offset="100%" stop-color="#16A085"/>
+    </linearGradient>
+    <marker id="arrPurple" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#9B59B6"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#2D5A94"/>
+    </marker>
+    <marker id="arrTeal" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#1ABC9C"/>
+    </marker>
+    <filter id="sh2" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="900" height="420" fill="url(#bg2)" rx="6"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="18" font-weight="700" fill="#FAFAFA" letter-spacing="0.5px">3-Way Classifier Comparison</text>
+  <rect x="330" y="38" width="240" height="3" rx="1.5" fill="url(#amber2)"/>
+
+  <!-- ═══ Arrows (rendered first for correct z-order) ═══ -->
+
+  <!-- Arrows: Input -> Approach A -->
+  <path d="M450,113 L160,113 L160,165 L145,165" fill="none" stroke="#9B59B6" stroke-width="1.5" marker-end="url(#arrPurple)"/>
+  <line x1="100" y1="223" x2="100" y2="235" stroke="#9B59B6" stroke-width="1.5" marker-end="url(#arrPurple)"/>
+
+  <!-- Arrows: Input -> Approach B -->
+  <line x1="450" y1="113" x2="450" y2="158" stroke="#2D5A94" stroke-width="1.5" marker-end="url(#arrBlue)"/>
+  <line x1="450" y1="223" x2="450" y2="235" stroke="#2D5A94" stroke-width="1.5" marker-end="url(#arrBlue)"/>
+
+  <!-- Arrows: Input -> Approach C -->
+  <path d="M450,113 L740,113 L740,165 L755,165" fill="none" stroke="#1ABC9C" stroke-width="1.5" marker-end="url(#arrTeal)"/>
+  <line x1="800" y1="223" x2="800" y2="235" stroke="#1ABC9C" stroke-width="1.5" marker-end="url(#arrTeal)"/>
+
+  <!-- ═══ INPUT (center top) ═══ -->
+  <g filter="url(#sh2)">
+    <rect x="375" y="58" width="150" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="375" y="58" width="4" height="55" rx="2 0 0 2" fill="#FFBF3B"/>
+  </g>
+  <text x="450" y="80" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#FFBF3B">Inspection Photo</text>
+  <text x="450" y="100" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">JPG / PNG image</text>
+
+  <!-- ═══ APPROACH A: Tag Heuristic (left) ═══ -->
+
+  <!-- Header -->
+  <text x="100" y="140" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="13" font-weight="700" fill="#9B59B6">Approach A</text>
+  <text x="100" y="155" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#999">Tag-Based Heuristic</text>
+
+  <!-- Step A1: Vision API -->
+  <g filter="url(#sh2)">
+    <rect x="20" y="168" width="160" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="20" y="168" width="4" height="55" rx="2 0 0 2" fill="#9B59B6"/>
+  </g>
+  <text x="100" y="190" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="700" fill="#9B59B6">Azure AI Vision</text>
+  <text x="100" y="207" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Extract tags + confidence</text>
+
+  <!-- Step A2: Keyword Match -->
+  <g filter="url(#sh2)">
+    <rect x="20" y="240" width="160" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="20" y="240" width="4" height="55" rx="2 0 0 2" fill="#9B59B6"/>
+  </g>
+  <text x="100" y="262" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="700" fill="#9B59B6">Keyword Matching</text>
+  <text x="100" y="279" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">tag_rules.json lookup</text>
+
+  <!-- Traits A -->
+  <text x="20" y="310" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#FFBF3B">$</text>
+  <text x="32" y="310" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">~$0.001/call</text>
+  <text x="20" y="324" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#8DC63F">+</text>
+  <text x="32" y="324" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Fast, low cost</text>
+  <text x="20" y="338" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#E74C3C">-</text>
+  <text x="32" y="338" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Limited accuracy</text>
+
+  <!-- ═══ APPROACH B: Zero-shot GPT-4o (center) ═══ -->
+
+  <!-- Header -->
+  <text x="450" y="140" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="13" font-weight="700" fill="#2D8FD9">Approach B</text>
+  <text x="450" y="155" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#999">Zero-shot GPT-4o</text>
+
+  <!-- Step B1: Base64 Encode -->
+  <g filter="url(#sh2)">
+    <rect x="370" y="168" width="160" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="370" y="168" width="4" height="55" rx="2 0 0 2" fill="#2D5A94"/>
+  </g>
+  <text x="450" y="190" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="700" fill="#2D8FD9">Base64 Encode</text>
+  <text x="450" y="207" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Image + system prompt</text>
+
+  <!-- Step B2: GPT-4o -->
+  <g filter="url(#sh2)">
+    <rect x="370" y="240" width="160" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="370" y="240" width="4" height="55" rx="2 0 0 2" fill="#2D5A94"/>
+  </g>
+  <text x="450" y="262" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="700" fill="#2D8FD9">GPT-4o Classification</text>
+  <text x="450" y="279" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">JSON: category + reasoning</text>
+
+  <!-- Traits B -->
+  <text x="370" y="310" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#FFBF3B">$</text>
+  <text x="382" y="310" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">~$0.02/call</text>
+  <text x="370" y="324" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#8DC63F">+</text>
+  <text x="382" y="324" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">High accuracy, reasoning</text>
+  <text x="370" y="338" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#E74C3C">-</text>
+  <text x="382" y="338" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Higher cost, slower</text>
+
+  <!-- ═══ APPROACH C: Few-shot GPT-4o (right) ═══ -->
+
+  <!-- Header -->
+  <text x="800" y="140" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="13" font-weight="700" fill="#1ABC9C">Approach C</text>
+  <text x="800" y="155" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#999">Few-shot GPT-4o</text>
+
+  <!-- Step C1: Example Images -->
+  <g filter="url(#sh2)">
+    <rect x="720" y="168" width="160" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="720" y="168" width="4" height="55" rx="2 0 0 2" fill="#1ABC9C"/>
+  </g>
+  <text x="800" y="190" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="700" fill="#1ABC9C">Example Images</text>
+  <text x="800" y="207" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">2 per category + target</text>
+
+  <!-- Step C2: Few-shot GPT-4o -->
+  <g filter="url(#sh2)">
+    <rect x="720" y="240" width="160" height="55" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="720" y="240" width="4" height="55" rx="2 0 0 2" fill="#1ABC9C"/>
+  </g>
+  <text x="800" y="262" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="700" fill="#1ABC9C">Few-shot Classification</text>
+  <text x="800" y="279" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">JSON: category + reasoning</text>
+
+  <!-- Traits C -->
+  <text x="720" y="310" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#FFBF3B">$</text>
+  <text x="732" y="310" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">~$0.05/call</text>
+  <text x="720" y="324" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#8DC63F">+</text>
+  <text x="732" y="324" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Highest accuracy potential</text>
+  <text x="720" y="338" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#E74C3C">-</text>
+  <text x="732" y="338" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Highest cost per call</text>
+
+  <!-- ═══ VS dividers ═══ -->
+  <text x="275" y="210" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="14" font-weight="700" fill="#FFBF3B">VS</text>
+  <line x1="275" y1="165" x2="275" y2="195" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="275" y1="220" x2="275" y2="300" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="625" y="210" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="14" font-weight="700" fill="#FFBF3B">VS</text>
+  <line x1="625" y1="165" x2="625" y2="195" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="625" y1="220" x2="625" y2="300" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- ═══ Bottom: cost-per-correct callout ═══ -->
+  <g filter="url(#sh2)">
+    <rect x="200" y="355" width="500" height="40" rx="4" fill="url(#box2)" stroke="#333"/>
+    <rect x="200" y="355" width="4" height="40" rx="2 0 0 2" fill="#FFBF3B"/>
+  </g>
+  <text x="450" y="375" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#FFBF3B">Key Metric: Cost per Correct Prediction</text>
+  <text x="450" y="390" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">All three approaches compared in eval_report.json with accuracy, cost, and cost-per-correct</text>
+
+  <!-- Tech901 badge -->
+  <text x="860" y="410" text-anchor="end" font-family="Syne, Calibri, sans-serif" font-size="9" font-weight="700" fill="#FFBF3B">Tech901 AI-102</text>
+</svg>

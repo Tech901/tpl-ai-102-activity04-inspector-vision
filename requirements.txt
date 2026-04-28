@@ -1,0 +1,11 @@
+azure-ai-vision-imageanalysis>=1.0.0
+azure-ai-inference>=1.0.0b6
+azure-ai-formrecognizer>=3.3.0
+# Optional: Custom Vision (Step 7 stretch goal, retiring Sept 2028)
+# azure-cognitiveservices-vision-customvision>=3.1.0
+azure-core>=1.30.0
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+reportlab>=4.0.0
+pytest>=8.0
+pytest-timeout>=2.2

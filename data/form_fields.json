@@ -1,0 +1,13 @@
+{
+  "expected_fields": [
+    "Inspector Name",
+    "Date",
+    "Location",
+    "Ward",
+    "Violation Type",
+    "Severity",
+    "Description",
+    "Photos Attached",
+    "Follow-up Required"
+  ]
+}

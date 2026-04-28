@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "case_id": "CASE-2026-001",
+    "image_path": "data/photos/pothole_01.jpg",
+    "expected_category": "pothole",
+    "description": "Large pothole on Poplar Avenue near Overton Park",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 2,
+    "case_id": "CASE-2026-002",
+    "image_path": "data/photos/pothole_02.jpg",
+    "expected_category": "pothole",
+    "description": "Cracked road surface on Union Avenue in Midtown",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 3,
+    "case_id": "CASE-2026-003",
+    "image_path": "data/photos/graffiti_01.jpg",
+    "expected_category": "graffiti",
+    "description": "Spray paint tags on retaining wall along Danny Thomas Boulevard",
+    "neighborhood": "Downtown"
+  },
+  {
+    "id": 4,
+    "case_id": "CASE-2026-004",
+    "image_path": "data/photos/graffiti_02.jpg",
+    "expected_category": "graffiti",
+    "description": "Graffiti on abandoned building facade on South Main Street",
+    "neighborhood": "South Main"
+  },
+  {
+    "id": 5,
+    "case_id": "CASE-2026-005",
+    "image_path": "data/photos/streetlight_01.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Tilted street light pole on Lamar Avenue near Airways",
+    "neighborhood": "Orange Mound"
+  },
+  {
+    "id": 6,
+    "case_id": "CASE-2026-006",
+    "image_path": "data/photos/streetlight_02.jpg",
+    "expected_category": "broken_streetlight",
+    "description": "Non-functioning street lamp on Third Street downtown",
+    "neighborhood": "Downtown"
+  },
+  {
+    "id": 7,
+    "case_id": "CASE-2026-007",
+    "image_path": "data/photos/dumping_01.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Mattress and furniture dumped on vacant lot off Chelsea Avenue",
+    "neighborhood": "Binghampton"
+  },
+  {
+    "id": 8,
+    "case_id": "CASE-2026-008",
+    "image_path": "data/photos/dumping_02.jpg",
+    "expected_category": "illegal_dumping",
+    "description": "Construction debris piled near drainage ditch on Frayser Boulevard",
+    "neighborhood": "Frayser"
+  },
+  {
+    "id": 9,
+    "case_id": "CASE-2026-009",
+    "image_path": "data/photos/water_01.jpg",
+    "expected_category": "water_damage",
+    "description": "Water main leak flooding sidewalk on Madison Avenue",
+    "neighborhood": "Whitehaven"
+  },
+  {
+    "id": 10,
+    "case_id": "CASE-2026-010",
+    "image_path": "data/photos/water_02.jpg",
+    "expected_category": "water_damage",
+    "description": "Storm drain overflow near Overton Park entrance",
+    "neighborhood": "Midtown"
+  },
+  {
+    "id": 11,
+    "case_id": "CASE-2026-011",
+    "image_path": "data/photos/clean_01.jpg",
+    "expected_category": "unknown",
+    "description": "Well-maintained street on Peabody Avenue with no visible issues",
+    "neighborhood": "Victorian Village"
+  },
+  {
+    "id": 12,
+    "case_id": "CASE-2026-012",
+    "image_path": "data/photos/clean_02.jpg",
+    "expected_category": "unknown",
+    "description": "Clean building exterior on Front Street with no damage or vandalism",
+    "neighborhood": "Downtown"
+  }
+]

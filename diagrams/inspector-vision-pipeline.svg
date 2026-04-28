@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Inspector Vision Pipeline</title>
+  <desc id="desc">Six-step AI inspection pipeline using Azure AI Vision, GPT-4o multimodal, and Document Intelligence to analyze Memphis 311 facilities inspection photos and forms, with confidence thresholds and cost analysis.</desc>
+
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="canvasGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <linearGradient id="containerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E1E1E"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFBF3B"/>
+      <stop offset="100%" stop-color="#E5A832"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8DC63F"/>
+      <stop offset="100%" stop-color="#7AB535"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2D5A94"/>
+      <stop offset="100%" stop-color="#234A7A"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9B59B6"/>
+      <stop offset="100%" stop-color="#8E44AD"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1ABC9C"/>
+      <stop offset="100%" stop-color="#16A085"/>
+    </linearGradient>
+    <linearGradient id="arrowGradH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFBF3B"/>
+      <stop offset="100%" stop-color="#8DC63F"/>
+    </linearGradient>
+    <linearGradient id="arrowGradV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFBF3B"/>
+      <stop offset="100%" stop-color="#8DC63F"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrowHead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#8DC63F"/>
+    </marker>
+    <marker id="arrowHeadAmber" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#FFBF3B"/>
+    </marker>
+    <marker id="arrowHeadRed" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#E74C3C"/>
+    </marker>
+    <marker id="arrowHeadPurple" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#9B59B6"/>
+    </marker>
+    <marker id="arrowHeadBlue" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#2D5A94"/>
+    </marker>
+    <marker id="arrowHeadTeal" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#1ABC9C"/>
+    </marker>
+    <marker id="arrowHeadGray" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#666"/>
+    </marker>
+
+    <!-- Shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="900" height="520" fill="url(#canvasGrad)" rx="6"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="18" font-weight="700" fill="#FAFAFA" letter-spacing="0.5px">Inspector Vision Pipeline</text>
+  <rect x="350" y="38" width="200" height="3" rx="1.5" fill="url(#amberGrad)"/>
+
+  <!-- ═══ ARROWS (rendered first for correct z-order) ═══ -->
+
+  <!-- Arrow: Photos -> Step 1 -->
+  <line x1="190" y1="97" x2="255" y2="97" stroke="url(#arrowGradH)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <!-- Arrow: Photos -> Step 2 -->
+  <path d="M200,97 L220,97 L220,192 L255,192" fill="none" stroke="url(#arrowGradV)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <!-- Arrow: Step 1 -> Step 2 (tags feed into classification) -->
+  <line x1="348" y1="138" x2="348" y2="150" stroke="#666" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowHeadGray)"/>
+  <text x="362" y="148" font-family="Source Sans 3, Calibri, sans-serif" font-size="8" fill="#888" font-style="italic">tags</text>
+
+  <!-- Arrow: Forms -> Step 3 -->
+  <path d="M200,182 L220,182 L220,292 L255,292" fill="none" stroke="url(#arrowGradV)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <!-- Arrows: Steps 1,2,3 -> Step 4 -->
+  <path d="M435,97 L460,97 L460,155 L495,155" fill="none" stroke="#9B59B6" stroke-width="1.5" marker-end="url(#arrowHeadPurple)"/>
+  <line x1="435" y1="192" x2="495" y2="180" stroke="#2D5A94" stroke-width="1.5" marker-end="url(#arrowHeadBlue)"/>
+  <path d="M435,292 L460,292 L460,210 L495,210" fill="none" stroke="#1ABC9C" stroke-width="1.5" marker-end="url(#arrowHeadTeal)"/>
+
+  <!-- Arrow: Step 3 -> Step 5 (PII redaction) -->
+  <line x1="435" y1="305" x2="495" y2="300" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowHeadRed)"/>
+  <text x="465" y="295" font-family="Source Sans 3, Calibri, sans-serif" font-size="8" fill="#888" font-style="italic">redact</text>
+
+  <!-- Arrow: Step 5 -> Step 4 (validated data feeds report) -->
+  <line x1="585" y1="255" x2="585" y2="235" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowHeadRed)"/>
+  <text x="595" y="248" font-family="Source Sans 3, Calibri, sans-serif" font-size="8" fill="#888" font-style="italic">clean</text>
+
+  <!-- Arrow: Step 4 -> Step 6 (Evaluation Harness) -->
+  <path d="M670,170 L690,170 L690,115 L715,115" fill="none" stroke="url(#arrowGradH)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <!-- Arrow: Step 4 -> result.json -->
+  <path d="M670,190 L690,190 L690,220 L715,220" fill="none" stroke="#8DC63F" stroke-width="1.5" marker-end="url(#arrowHead)"/>
+
+  <!-- Arrow: Step 6 -> eval_report.json (routes down right edge, around result.json) -->
+  <path d="M890,150 L897,150 L897,290 L890,290" fill="none" stroke="#FFBF3B" stroke-width="1.5" marker-end="url(#arrowHeadAmber)"/>
+  <text x="897" y="225" font-family="Source Sans 3, Calibri, sans-serif" font-size="8" fill="#888" font-style="italic" transform="rotate(90,897,225)">eval</text>
+
+  <!-- ═══ INPUT ROW ═══ -->
+
+  <!-- Input: Photos -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="65" width="160" height="65" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="40" y="65" width="4" height="65" rx="2 0 0 2" fill="#FFBF3B"/>
+  </g>
+  <text x="120" y="87" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#FFBF3B">Inspection Photos</text>
+  <text x="120" y="103" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">JPG/PNG images</text>
+  <text x="120" y="118" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">potholes, graffiti, etc.</text>
+
+  <!-- Input: Forms -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="150" width="160" height="65" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="40" y="150" width="4" height="65" rx="2 0 0 2" fill="#FFBF3B"/>
+  </g>
+  <text x="120" y="172" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#FFBF3B">Inspection Forms</text>
+  <text x="120" y="188" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">PDF documents</text>
+  <text x="120" y="203" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">case IDs + field reports</text>
+
+  <!-- ═══ STEP 1: Vision Analysis ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="260" y="60" width="175" height="78" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="260" y="60" width="4" height="78" rx="2 0 0 2" fill="#9B59B6"/>
+  </g>
+  <text x="273" y="76" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" font-weight="600" fill="#999">STEP 1</text>
+  <text x="348" y="93" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#9B59B6">Azure AI Vision</text>
+  <text x="348" y="108" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Image Analysis 4.0</text>
+  <text x="348" y="123" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">tags, objects, captions</text>
+
+  <!-- ═══ STEP 2: GPT-4o Classification ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="260" y="155" width="175" height="78" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="260" y="155" width="4" height="78" rx="2 0 0 2" fill="#2D5A94"/>
+  </g>
+  <text x="273" y="171" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" font-weight="600" fill="#999">STEP 2</text>
+  <text x="348" y="188" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#2D8FD9">GPT-4o Multimodal</text>
+  <text x="348" y="203" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Classification + Threshold</text>
+  <text x="348" y="218" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">category + needs_review</text>
+
+  <!-- ═══ STEP 3: Document Intelligence ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="260" y="255" width="175" height="78" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="260" y="255" width="4" height="78" rx="2 0 0 2" fill="#1ABC9C"/>
+  </g>
+  <text x="273" y="271" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" font-weight="600" fill="#999">STEP 3</text>
+  <text x="348" y="288" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#1ABC9C">Document Intelligence</text>
+  <text x="348" y="303" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">prebuilt-document OCR</text>
+  <text x="348" y="318" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">case IDs + key-value pairs</text>
+
+  <!-- ═══ STEP 4: Report Builder ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="130" width="170" height="100" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="500" y="130" width="4" height="100" rx="2 0 0 2" fill="#8DC63F"/>
+  </g>
+  <text x="513" y="148" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" font-weight="600" fill="#999">STEP 4</text>
+  <text x="585" y="168" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#8DC63F">Report Builder</text>
+  <text x="585" y="185" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Case-ID matching</text>
+  <text x="585" y="200" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">auto-approved vs review</text>
+  <text x="585" y="215" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">category counts</text>
+
+  <!-- ═══ STEP 5: Safety ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="255" width="170" height="78" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="500" y="255" width="4" height="78" rx="2 0 0 2" fill="#E74C3C"/>
+  </g>
+  <text x="513" y="271" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" font-weight="600" fill="#999">STEP 5</text>
+  <text x="585" y="290" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#E74C3C">Safety + Validation</text>
+  <text x="585" y="305" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">File validation</text>
+  <text x="585" y="318" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">PII redaction</text>
+
+  <!-- ═══ STEP 6: Evaluation ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="65" width="170" height="100" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="720" y="65" width="4" height="100" rx="2 0 0 2" fill="#FFBF3B"/>
+  </g>
+  <text x="733" y="83" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" font-weight="600" fill="#999">STEP 6</text>
+  <text x="805" y="100" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#FFBF3B">3-Way Eval Harness</text>
+  <text x="805" y="117" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">Tags vs Zero-shot vs Few-shot</text>
+  <text x="805" y="132" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">accuracy + cost-per-correct</text>
+  <text x="805" y="147" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#999">latency instrumentation</text>
+
+  <!-- ═══ OUTPUT: result.json ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="195" width="170" height="55" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="720" y="195" width="4" height="55" rx="2 0 0 2" fill="#8DC63F"/>
+  </g>
+  <text x="805" y="218" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#8DC63F">result.json</text>
+  <text x="805" y="237" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">task: inspector_vision</text>
+
+  <!-- ═══ OUTPUT: eval_report.json ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="268" width="170" height="55" rx="4" fill="url(#containerGrad)" stroke="#333"/>
+    <rect x="720" y="268" width="4" height="55" rx="2 0 0 2" fill="#8DC63F"/>
+  </g>
+  <text x="805" y="291" text-anchor="middle" font-family="Syne, Calibri, sans-serif" font-size="11" font-weight="700" fill="#8DC63F">eval_report.json</text>
+  <text x="805" y="310" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="9" fill="#CCC">3-way comparison + cost</text>
+
+  <!-- ═══ LEGEND ═══ -->
+  <rect x="30" y="370" width="860" height="135" rx="4" fill="#111" stroke="#222"/>
+
+  <!-- Legend title -->
+  <text x="50" y="393" font-family="Syne, Calibri, sans-serif" font-size="12" font-weight="700" fill="#FAFAFA">Azure Services</text>
+
+  <!-- Legend items - Row 1 -->
+  <rect x="50" y="405" width="12" height="12" rx="2" fill="#9B59B6"/>
+  <text x="68" y="415" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#CCC">Azure AI Vision (Image Analysis 4.0) - D4.1</text>
+
+  <rect x="380" y="405" width="12" height="12" rx="2" fill="#2D5A94"/>
+  <text x="398" y="415" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#CCC">Azure OpenAI GPT-4o (Zero-shot + Few-shot) - D2.2</text>
+
+  <!-- Legend items - Row 2 -->
+  <rect x="50" y="428" width="12" height="12" rx="2" fill="#1ABC9C"/>
+  <text x="68" y="438" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#CCC">Azure Document Intelligence (prebuilt-document) - D6.2</text>
+
+  <rect x="380" y="428" width="12" height="12" rx="2" fill="#E74C3C"/>
+  <text x="398" y="438" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#CCC">Input Validation + PII Redaction - D1.4</text>
+
+  <!-- Legend items - Row 3 -->
+  <rect x="50" y="451" width="12" height="12" rx="2" fill="#8DC63F"/>
+  <text x="68" y="461" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#CCC">Python Data Processing (report, metrics, cost)</text>
+
+  <rect x="380" y="451" width="12" height="12" rx="2" fill="#FFBF3B"/>
+  <text x="398" y="461" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#CCC">3-Way Eval Harness (Tags vs Zero-shot vs Few-shot)</text>
+
+  <!-- Categories -->
+  <text x="50" y="487" font-family="Syne, Calibri, sans-serif" font-size="10" font-weight="600" fill="#999">Categories:</text>
+  <text x="125" y="487" font-family="Source Sans 3, Calibri, sans-serif" font-size="10" fill="#999">pothole | graffiti | broken_streetlight | illegal_dumping | water_damage</text>
+
+  <!-- Tech901 badge -->
+  <text x="855" y="487" text-anchor="end" font-family="Syne, Calibri, sans-serif" font-size="9" font-weight="700" fill="#FFBF3B">Tech901 AI-102</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "gpt4o": {
+    "input_per_1k_tokens": 0.005,
+    "cached_input_per_1k_tokens": 0.0025,
+    "output_per_1k_tokens": 0.015
+  },
+  "gpt4o_fewshot": {
+    "input_per_1k_tokens": 0.005,
+    "cached_input_per_1k_tokens": 0.0025,
+    "output_per_1k_tokens": 0.015
+  },
+  "vision_api": {
+    "per_call": 0.001
+  }
+}
